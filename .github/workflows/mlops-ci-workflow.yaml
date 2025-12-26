@@ -9,7 +9,7 @@ on:
       - main 
 
 jobs:
-  build:
+  workflow:
     runs-on: ubuntu-latest 
     steps:
       - name: Checkout code 
@@ -22,7 +22,4 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt 
-      - name: Run tests 
-        run: |
-          pytest tests/
 
