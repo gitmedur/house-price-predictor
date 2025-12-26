@@ -64,7 +64,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: mltpi/fastapi:{{ github.sha }}
+          tags: mltpi/fastapi:${{ github.sha::7 }}
           context: "."
           file: "Dockerfile"
 
